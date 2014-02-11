@@ -1,0 +1,7 @@
+curl -3 -u "6438d41f-8738-42e5-9d1f-d3539cd4a2c4:cb519bdb-adea-4140-bc94-c75f459693c1" -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{
+       "message": {
+         "alert":"HELLO!"
+    
+       },
+       "simple-push": "version=123"
+     }' https://sblancpush-sblanc.rhcloud.com/rest/sender

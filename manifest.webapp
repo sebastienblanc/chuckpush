@@ -1,0 +1,18 @@
+{
+  "version": "0.1",
+  "name": "ChuckPush",
+  "description": "ChuckPush Application for Firefox OS",
+  "launch_path": "index.html",
+  "developer": {
+    "name": "AeroGear",
+    "url": "http://aerogear.org"
+  },
+"permissions": {
+    "push": {},
+    "desktop-notification": {}
+  },
+  "messages": [
+    { "push": "/" },
+    { "push-register": "/" }
+  ]
+}
