@@ -1,9 +1,9 @@
 'use strict';
 
 var chuckConfig = {
-  pushServerURL : "https://sblancpush-sblanc.rhcloud.com",
-  variantID : "12551cad-a40d-417f-aa25-473c3aa7eb6d",
-  variantSecret : "54dd1b3f-5d37-4372-898f-6ef325fd4e38"
+  pushServerURL : "",
+  variantID : "",
+  variantSecret : ""
 };
 
 
@@ -23,7 +23,7 @@ chuckPush.config(['$routeProvider', function($routeProvider) {
      for (var i = 0, l = regs.result.length; i < l; i++) {
       var pushEndpoint = regs.result[i].pushEndpoint;
       navigator.push.unregister(pushEndpoint);
-      UPClient.unregisterWithPushServer(pushEndpoint.substr(pushEndpoint.lastIndexOf('/') + 1));
+      UPClient.unregisterWithPushServer(pushEndpoint);
     }
   }
 
@@ -33,8 +33,7 @@ chuckPush.config(['$routeProvider', function($routeProvider) {
     jokeEndpoint = req.result;
     var jokeSettings = {
       metadata: {
-        deviceToken: jokeEndpoint.substr(jokeEndpoint.lastIndexOf('/') + 1),
-        simplePushEndpoint: jokeEndpoint
+        deviceToken: jokeEndpoint
       }
     }
 
